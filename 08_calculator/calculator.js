@@ -1,25 +1,30 @@
-const add = function() {
-	
+// declaring anonymous function shortcut (=>)
+const add = (a, b) => {
+  return a + b;
 };
 
-const subtract = function() {
-	
+const subtract = function (a, b) {
+  return a - b;
 };
 
-const sum = function() {
-	
+const sum = function (array) {
+  return array.reduce((total, current) => total + current, 0);
 };
 
-const multiply = function() {
-
+const multiply = function (array) {
+  return array.reduce((total, current) => total * current);
 };
 
-const power = function() {
-	
+const power = function (number, power) {
+  return Math.pow(number, power);
 };
 
-const factorial = function() {
-	
+const factorial = function (number) {
+  if (number < 0 || number === 0) return 1;
+  else {
+    for (let i = number - 1; i >= 1; i--) number *= i;
+    return number;
+  }
 };
 
 // Do not edit below this line
@@ -29,5 +34,5 @@ module.exports = {
   sum,
   multiply,
   power,
-  factorial
+  factorial,
 };
